@@ -1,236 +1,168 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Restaurant Reservation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolat Lumière</title>
 
-<style>
-body{
-    margin:0;
-    background:#f5f1ea;
-    font-family:"Yu Gothic","Hiragino Sans",sans-serif;
-    color:#333;
-}
-
-.container{
-    max-width:700px;
-    margin:50px auto;
-    padding:40px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
-
-h1{
-    text-align:center;
-    color:#5d4037;
-    margin-bottom:10px;
-}
-
-.subtitle{
-    text-align:center;
-    color:#777;
-    margin-bottom:40px;
-}
-
-.form-group{
-    margin-bottom:20px;
-}
-
-label{
-    display:block;
-    margin-bottom:8px;
-    font-weight:bold;
-}
-
-input,
-select,
-textarea{
-    width:100%;
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    box-sizing:border-box;
-    font-size:16px;
-}
-
-textarea{
-    resize:vertical;
-}
-
-button{
-    width:100%;
-    padding:15px;
-    background:#6d4c41;
-    color:white;
-    border:none;
-    border-radius:8px;
-    font-size:18px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#4e342e;
-}
-</style>
+ 
+<link rel="stylesheet" href="style.css">
+ 
 
 </head>
 <body>
 
-<div class="container">
+<header>
+    <div class="logo">
+        Chocolat Lumière
+    </div>
 
-    <h1>Restaurant Reservation</h1>
-    <p class="subtitle">
-        ご予約フォーム
+ 
+<nav>
+    <ul>
+        <li><a href="#concept">CONCEPT</a></li>
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
+        <li><a href="#access">ACCESS</a></li>
+        <li><a href="#reserve">RESERVE</a></li>
+    </ul>
+</nav>
+ 
+
+</header>
+
+<section class="hero">
+
+ 
+<div class="hero-overlay">
+
+    <h1>
+        Chocolate Creates<br>
+        Small Luxuries
+    </h1>
+
+    <p>
+        厳選されたカカオと香り高いコーヒーで、
+        日常に小さな贅沢を。
     </p>
 
-    <iframe
-    name="hidden_iframe"
-    id="hidden_iframe"
-    style="display:none;"
-></iframe>
-
-    <!--
-        ↓↓↓ ここにGoogleフォームの送信先URLを入れる ↓↓↓
-
-        action="https://docs.google.com/forms/d/e/XXXXXXXXXXXXXXXX/formResponse"
-
-        formResponse で終わるURLを使う
-    -->
-    <form
-        id="reserveForm"
-        action="https://docs.google.com/forms/u/0/d/1ab7WCyBviqUp-4ElyU0eXKJ6Xc_R9iDsP16fN0g9-oA/formResponse"
-        method="POST"
-        target="hidden_iframe"
-    >
-
-        <div class="form-group">
-            <label>お名前</label>
-
-            <!--
-                ↓↓↓ 名前のentry番号 ↓↓↓
-                name="entry.123456789"
-            -->
-            <input
-                type="text"
-                name="entry.2005620554"
-                required
-            >
-        </div>
-
-        <div class="form-group">
-            <label>電話番号</label>
-
-            <!--
-                ↓↓↓ 電話番号のentry番号 ↓↓↓
-            -->
-            <input
-                type="tel"
-                name="entry.1166974658"
-                required
-            >
-        </div>
-
-        <div class="form-group">
-            <label>メールアドレス</label>
-
-            <!--
-                ↓↓↓ メールアドレスのentry番号 ↓↓↓
-            -->
-            <input
-                type="email"
-                name="entry.1045781291"
-            >
-        </div>
-
-        <div class="form-group">
-            <label>来店日</label>
-
-            <!--
-                ↓↓↓ 来店日のentry番号 ↓↓↓
-            -->
-            <input
-                type="date"
-                name="entry.1938750856"
-                required
-            >
-        </div>
-
-        <div class="form-group">
-            <label>来店時間</label>
-
-            <!--
-                ↓↓↓ 来店時間のentry番号 ↓↓↓
-            -->
-            <input
-                type="time"
-                name="entry.430639884"
-                required
-            >
-        </div>
-
-        <div class="form-group">
-            <label>人数</label>
-
-            <!--
-                ↓↓↓ 人数のentry番号 ↓↓↓
-            -->
-            <select name="entry.1806896106">
-                <option value="1名">1名</option>
-                <option value="2名">2名</option>
-                <option value="3名">3名</option>
-                <option value="4名">4名</option>
-                <option value="5名以上">5名以上</option>
-            </select>
-        </div>
-
-        <button type="submit">
-            予約する
-        </button>
-
-    </form>
+    <a href="#reserve" class="btn">
+        ご予約はこちら
+    </a>
 
 </div>
+ 
 
-<script>
+</section>
 
-const iframe =
-    document.getElementById("hidden_iframe");
+<section id="concept" class="section">
 
-let submitted = false;
+ 
+<h2>CONCEPT</h2>
 
-document
-.getElementById("reserveForm")
-.addEventListener("submit", function(){
+<p class="lead">
+    Chocolat Lumièreは、
+    チョコレートを主役にした小さなカフェです。
+</p>
 
-    submitted = true;
+<p>
+    カカオ本来の香りを大切にした
+    ガトーショコラ、ボンボンショコラ、
+    ホットチョコレートをご提供しています。
+</p>
+ 
 
-});
+</section>
 
-iframe.onload = function(){
+<section id="menu" class="section menu">
 
-    if(submitted){
+ 
+<h2>MENU</h2>
 
-        document.body.innerHTML = `
-            <div style="
-                height:100vh;
-                display:flex;
-                flex-direction:column;
-                justify-content:center;
-                align-items:center;
-            ">
-                <h1>ご予約ありがとうございます</h1>
-                <p>予約を受け付けました。</p>
-            </div>
-        `;
+<div class="cards">
 
-    }
+    <div class="card">
+        <img src="images/chocolate1.jpg">
+        <h3>ガトーショコラ</h3>
+        <p>濃厚なカカオの余韻を楽しめる看板商品。</p>
+    </div>
 
-};
+    <div class="card">
+        <img src="images/chocolate2.jpg">
+        <h3>ボンボンショコラ</h3>
+        <p>季節ごとに変わる限定フレーバー。</p>
+    </div>
 
-</script>
+    <div class="card">
+        <img src="images/cafe.jpg">
+        <h3>ホットチョコレート</h3>
+        <p>深い香りとやさしい甘さ。</p>
+    </div>
+
+</div>
+ 
+
+</section>
+
+<section id="gallery" class="section">
+
+ 
+<h2>GALLERY</h2>
+
+<div class="gallery">
+
+    <img src="images/chocolate1.jpg">
+    <img src="images/chocolate2.jpg">
+    <img src="images/cafe.jpg">
+
+</div>
+ 
+
+</section>
+
+<section id="access" class="section">
+
+ 
+<h2>ACCESS</h2>
+
+<div class="access-box">
+
+    <p>〒000-0000</p>
+    <p>東京都〇〇区〇〇1-2-3</p>
+    <p>TEL: 00-0000-0000</p>
+    <p>営業時間 10:00〜19:00</p>
+
+</div>
+ 
+
+</section>
+
+<section id="reserve" class="section">
+
+ 
+<h2>RESERVE</h2>
+
+<p>
+    ご予約はお電話または予約フォームより承っております。
+</p>
+
+<a href="./form.html" class="btn">
+    Reservation Form
+</a>
+ 
+
+</section>
+
+<footer>
+
+ 
+<p>
+    © 2026 Chocolat Lumière
+</p>
+ 
+
+</footer>
 
 </body>
 </html>

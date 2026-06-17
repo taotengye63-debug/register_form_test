@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="practice_form_style.css">
+</head>
+
+<body>
+    <main>
+        <iframe name="hidden_iframe2" style="display:none" id="hidden_iframe2"></iframe>
+
+        <form action="https://docs.google.com/forms/u/0/d/1ab7WCyBviqUp-4ElyU0eXKJ6Xc_R9iDsP16fN0g9-oA/formResponse"
+            method="POST" target="hidden_iframe2" id="reservation_form2">
+
+            <div class="container">
+                <h1>Reservation Form</h1>
+                <p class="subtitle">
+                    ご予約フォーム
+                </p>
+
+                <div class="form_group">
+                    <label for="name">お名前</label>
+                    <input type="text" name="entry.2005620554" id="name" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="mail">メールアドレス</label>
+                    <input type="text" name="entry.1045781291" id="mail" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="tel">電話番号</label>
+                    <input type="text" name="entry.1166974658" id="tel" required>
+                </div>
+
+                <div class="form_group">
+                    <label>ご予約人数</label>
+                    <select name="entry.1806896106" required>
+                        <option value="1名">1名</option>
+                        <option value="2名">2名</option>
+                        <option value="3名">3名</option>
+                        <option value="4名">4名</option>
+                        <option value="5名以上">5名以上</option>
+                    </select>
+
+                </div>
+
+                <div class="form_group">
+                    <label for="date">ご予約日</label>
+                    <input type="date" name="entry.1938750856" id="date">
+                </div>
+
+                <div class="form_group">
+                    <label for="time">ご予約時間</label>
+                    <input type="time" name="entry.430639884" id="time">
+                </div>
+
+                <button type="submit">
+                    送信
+                </button>
+            </div>
+
+
+        </form>
+    </main>
+    <script src="practice_form.js"></script>
+</body>
+
+</html>
