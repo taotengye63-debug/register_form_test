@@ -1,5 +1,3 @@
-console.log("JS読み込み成功")
-
 const iframe = document.getElementById("hidden_iframe2");
 
 let submitted = false;
